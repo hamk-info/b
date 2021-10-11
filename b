@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # _*_ coding: utf-8 _*_
 
 #####
@@ -130,7 +130,7 @@ if __name__ == '__main__':
                       + "." + datetime.now().strftime('%Y%m%d') +"{0:02d}".format(j)))
                     # コピーして結果を表示
                     if ( os.path.exists( destname ) == False ):
-                        shutil.copy2( srcname, destname)
+                        shutil.copy2( srcname, destname, follow_symlinks=False)
                         print (" %d : [ %s  => %s ]" % (i, srcname, destname))
                         printDebug("destname : "+ destname)
                         break
